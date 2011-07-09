@@ -1,0 +1,257 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>Introducing Roil</title>
+
+  <link rel="stylesheet" href="./css/reset.css" type="text/css"/>
+  <link rel="stylesheet" href="./css/showoff.css" type="text/css"/>
+
+  <script type="text/javascript" src="./js/jquery-1.4.2.min.js"></script>
+  <script type="text/javascript" src="./js/jquery.cycle.all.js"></script>
+	<script type="text/javascript" src="./js/jquery-print.js"></script>
+  <script type="text/javascript" src="./js/jquery.batchImageLoad.js"></script>
+
+  <script type="text/javascript" src="./js/jquery.doubletap-0.1.js"></script>
+
+  <script type="text/javascript" src="./js/fg.menu.js"></script>
+  <script type="text/javascript" src="./js/showoff.js"></script>
+  <script type="text/javascript" src="./js/jTypeWriter.js"> </script>
+  <script type="text/javascript" src="./js/sh_main.min.js"></script>
+  <script type="text/javascript" src="./js/core.js"></script>
+  <script type="text/javascript" src="./js/showoffcore.js"></script>
+
+  <link type="text/css" href="./css/fg.menu.css" media="screen" rel="stylesheet" />
+  <link type="text/css" href="./css/theme/ui.all.css" media="screen" rel="stylesheet" />
+  <link type="text/css" href="./css/sh_style.css" rel="stylesheet" >
+
+  
+
+  
+
+  <script type="text/javascript">
+  $(function(){
+    setupPreso(false, './');
+  });
+  </script>
+</head>
+
+<body>
+
+
+<a tabindex="0" href="#search-engines" class="fg-button fg-button-icon-right ui-widget ui-state-default ui-corner-all" id="navmenu"><span class="ui-icon ui-icon-triangle-1-s"></span>slides</a>
+<div id="navigation" class="hidden"></div>
+
+<div id="help">
+  <table>
+    <tr><td class="key">space, &rarr;</td><td>next slide</td></tr>
+    <tr><td class="key">&larr;</td><td>previous slide</td></tr>
+    <tr><td class="key">d</td><td>debug mode</td></tr>
+    <tr><td class="key">## &lt;ret&gt;</td><td>go to slide #</td></tr>
+    <tr><td class="key">c</td><td>table of contents (vi)</td></tr>
+    <tr><td class="key">f</td><td>toggle footer</td></tr>
+    <tr><td class="key">r</td><td>reload slides</td></tr>
+    <tr><td class="key">z</td><td>toggle help (this)</td></tr>
+  </table>
+</div>
+
+<div class="buttonNav">
+  <input type="submit" onClick="prevStep();" value="prev"/>
+  <input type="submit" onClick="nextStep();" value="next"/>
+</div>
+
+<div id="preso">loading presentation...</div>
+<div id="footer">
+  <span id="slideInfo"></span>
+  <span id="debugInfo"></span>
+  <span id="notesInfo"></span>
+</div>
+
+<div id="slides" class="offscreen" style="display:none;">
+<div class="slide" data-transition="none"><div class="content" ref="intro/01_slide">
+<h1>Introducing Roil</h1>
+
+<h2>Node Powered Frontend Development</h2>
+
+<h3>@CNode July, 2011</h3>
+</div>
+</div><div class="slide" data-transition="none"><div class="content bullets" ref="origin/01_origin">
+<h1>Origin</h1>
+
+<ul>
+<li>JavaScript unit test</li>
+<li>CSS X-browser-shit</li>
+</ul>
+
+</div>
+</div><div class="slide" data-transition="none"><div class="content code" ref="origin/02_problem/1">
+<h1>Boilerplate</h1>
+
+<pre><code>&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8" /&gt;
+  &lt;title&gt;Testing my awesome module&lt;/title&gt;
+  &lt;script src="/src/awesome.js" type="text/javascript"&gt;&lt;/script&gt;
+  &lt;link href="/test/lib/qunit.css" rel="stylesheet" type="text/css" /&gt;
+  &lt;script src="/test/lib/qunit.js" type="text/javascript"&gt;&lt;/script&gt;
+  &lt;script src="/test/test_awesome.js" type="text/javascript"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;div id="fixture_or_similar"&gt;Meh&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content center" ref="origin/02_problem/2">
+<h1>Platforms</h1>
+
+<p><img src="file:///home/whyme/code/presentation/introducing-roil/origin/platforms.jpg" alt="platforms.jpg"/></p>
+
+<h3><a href="http://developer.yahoo.com/yui/articles/gbs/">Yahoo Graded Browser Support</a></h3>
+</div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental" ref="origin/02_problem/3">
+<h1>Backend fat ass</h1>
+
+<ul>
+<li>Installation == PITA</li>
+<li>.conf the hell</li>
+<li>Better than nothing (slightly)</li>
+</ul>
+
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="stuff-out-there/01_platforms/1">
+<h1>Existing Dev Platforms</h1>
+</div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental" ref="stuff-out-there/01_platforms/2">
+<h1>Browser extension/plugin</h1>
+
+<ul>
+<li>Limited environment</li>
+<li>Portablility issue</li>
+<li>Installation hassel</li>
+</ul>
+
+</div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental" ref="stuff-out-there/01_platforms/3">
+<h1>IDE/Editor</h1>
+
+<ul>
+<li>Even less portable</li>
+<li>Browser drivers WTF</li>
+</ul>
+
+</div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental" ref="my-take/01_slide/1">
+<h1>Server-ish</h1>
+
+<ul>
+<li>JS Test Driver</li>
+<li>TestSwarm</li>
+<li>Yeti</li>
+</ul>
+
+</div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental" ref="my-take/01_slide/2">
+<h1>Event that matters</h1>
+
+<ul>
+<li>File changed</li>
+<li>Request received</li>
+<li>Command from console</li>
+<li>Sounds Node-ish!</li>
+</ul>
+
+</div>
+</div><div class="slide" data-transition="none"><div class="content code" ref="roil/01_internal/1">
+<h1>npm i roil -g</h1>
+</div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental" ref="roil/01_internal/2">
+<h1>How Roil Works</h1>
+
+<ul>
+<li>Build Graph</li>
+<li>Bubble <code>change</code> Event</li>
+<li>Notify client via Socket.IO</li>
+</ul>
+
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="roil/02_roadmap/1">
+<h1>Roadmap</h1>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="roil/02_roadmap/2">
+<h1>0.2: Plugin System</h1>
+</div>
+</div><div class="slide" data-transition="none"><div class="content code small" ref="roil/02_roadmap/3">
+<h1>Declaring Dependencies</h1>
+
+<pre><code>var File = require('roil/resource/file')
+
+exports.stylus = function(roil) {
+  var endWithCss = /\.css$/
+
+  roil.matchResource(File, endWithCss, function(r) {
+    var path = r.fullPath
+      , stylus = path.replace(endWithCss, ".styl")
+    r.addDep(stylus)
+  })
+}
+</code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content code small" ref="roil/02_roadmap/4">
+<h1>Mount Middleware</h1>
+
+<pre><code>var httpProxy = require("http-proxy")
+
+exports.rails = function(roil) {
+  roil.server.use(
+    httpProxy.createServer(3000, 'localhost')
+  )
+}
+</code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content code small" ref="roil/02_roadmap/5">
+<h1>Validation</h1>
+
+<pre><code>var File = require('roil/resource/file')
+  , jsLint = require('jslint')
+
+exports.jsLint = function(roil) {
+  roil.matchResource(File, function(r) {
+    r.on('needValidation', function(e) {
+      e.pause(2000)
+      jsLint.test(r.fullPath, function(err) {
+        if (err) {
+          e.stop()
+          console.error("%s failed js lint test", r)
+        } else {
+          e.proceed()
+        }
+      })
+    })
+  })
+}
+</code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental" ref="roil/03_roadmap_more">
+<h1>0.3</h1>
+
+<ul>
+<li>Graph traversing</li>
+<li>Frontend</li>
+<li>Plugin Helper</li>
+</ul>
+
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="roil/04_end">
+<h1>Fin</h1>
+
+<h2><a href="https://github.com/5long/roil">https://github.com/5long/roil</a></h2>
+</div>
+</div>
+</div>
+
+</body>
+</html>
